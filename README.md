@@ -25,7 +25,7 @@
 
   ## Usage
 
-  - [SocialNetworkGuide](./assets/SocialNetworkGuide.mp4)
+  - [SocialNetworkGuide](https://drive.google.com/file/d/1Eq0zvQD-Xl1AsV_d4mjiQjUNsp7NGSNU/view?usp=share_link)
   - [REPO](https://github.com/fernandot10/socialNetworkApi)
 
   ## License 
