@@ -16,7 +16,7 @@ module.exports = {
                     ? res.status(404).json({ message: 'Thought does not exist!' })
                     : res.json(thought)
             )
-            .cathc((err) => res.status(500).json(err));
+            .catch((err) => res.status(500).json(err));
     },
 
 
@@ -55,7 +55,7 @@ module.exports = {
 
 
     createReaction(req, res) {
-        Thought.findOneAndUpdate( 
+        Thought.findOneAndUpdate(
             { _id: req.params.thoughtId },
             { $push: { reactions: req.body } },
             { new: true, runValidators: true }
@@ -63,7 +63,7 @@ module.exports = {
             .populate('reactions')
             .then((thought) =>
                 !thought
-                    ? res.status(404).json( { message: 'Thought does not exist!' })
+                    ? res.status(404).json({ message: 'Thought does not exist!' })
                     : res.json(thought)
             )
             .catch((err) => res.status(500).json(err));
@@ -78,9 +78,9 @@ module.exports = {
         )
             .then((thought) => {
                 if (!thought) {
-                    return res.status(404).json( { message: 'Thought does not exist!' });
+                    return res.status(404).json({ message: 'Thought does not exist!' });
                 }
-                res.status(200).json( { message: 'Reaction Deleted', thought });
+                res.status(200).json({ message: 'Reaction Deleted', thought });
             })
             .catch((err) => res.status(500).json(err));
     },
