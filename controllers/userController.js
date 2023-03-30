@@ -70,7 +70,7 @@ module.exports = {
             .catch((err) => res.status(500).json(err));
     },
 
-    
+
     deleteFriend(req, res) {
         User.findOneAndUpdate(
             { _id: req.params.id },

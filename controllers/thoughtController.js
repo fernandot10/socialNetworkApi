@@ -36,7 +36,8 @@ module.exports = {
                         { thoughts: req.params.id },
                         { $pull: { thoughts: req.params.id } },
                         { message: 'Thought Deleted' }
-                    ))
+                    )
+                )
     },
 
 
